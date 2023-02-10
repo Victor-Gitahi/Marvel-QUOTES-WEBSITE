@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #15141a;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+}
+
+.nav-main {
+  padding: 1.875rem 8.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 6.6875rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.nav-main__logo {
+  margin-bottom: 0.5rem;
+}
+.nav-main__info {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: lighter;
+  letter-spacing: 5px;
+}
+
+.text__main-title {
+  font-family: "Futura";
+  font-size: 1.95rem;
+  letter-spacing: 7%;
+}
+.text__headers-wrapper, .text__main-description {
+  text-align: center;
+  padding-inline: 3rem;
+}
+.text__headers-wrapper {
+  line-height: 205%;
+  margin-bottom: 4.125rem;
+}
+.text__main-description {
+  max-width: 1200px;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 12;
+  line-height: 198.5%;
+  letter-spacing: 5.5%;
+}
+
+.special-text {
+  padding: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.1333333333);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+
+.back-button {
+  margin-bottom: 3.4375rem;
+  filter: invert(1);
+}
+
+.quote-card {
+  height: auto;
+  width: auto;
+  padding: 2.5rem 1.5rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+.quote-card__headers {
+  margin-bottom: 1.875rem;
+  line-height: 150%;
+}
+.quote-card__movie-title, .quote-card__quote-author {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 1.95rem;
+  letter-spacing: -6%;
+}
+.quote-card__movie-title {
+  margin-bottom: 0.6875rem;
+  color: #EE1D52;
+}
+.quote-card__quote-phrase {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.quote-card__quote-phrase--quotation-mark {
+  margin-right: 10px;
+}
+.quote-card__quote-phrase--quote-text {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 0.8125rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 1.25rem 4.375rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.0666666667);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: 700;
+  letter-spacing: 0.45rem;
+  text-transform: uppercase;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+.content-section {
+  flex: none;
+  width: 100vw;
+  scroll-snap-align: start;
+}
+.content-section__home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content-section__quotes-page {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.content-section__quotes-page .quote-card {
+  align-self: center;
+  width: 80vw;
+  min-height: 30vh;
+}/*# sourceMappingURL=main.css.map */

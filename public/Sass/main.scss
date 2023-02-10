@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flexbox($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+body {
+    background-color: #15141a;
+    color: #fff;
+    // padding-inline: 3.875rem;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    /* Remove scrollbar space */
+    background: transparent;
+}
+
+.nav-main {
+    padding: 1.875rem 8.75rem;
+    @include flexbox(center, center, row);
+    margin-bottom: 6.6875rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__logo {
+        margin-bottom: .5rem;
+    }
+    &__info {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "JetBrainsMono Nerd Font";
+        font-weight: lighter;
+        letter-spacing: 5px;
+    }
+}
+
+.text {
+    &__main-title {
+        font-family: "Futura";
+        font-size: 1.95rem;
+        letter-spacing: 7%;
+    }
+    &__headers-wrapper,
+    &__main-description {
+        text-align: center;
+        padding-inline: 3rem;
+    }
+    &__headers-wrapper {
+        line-height: 205%;
+        margin-bottom: 4.125rem;
+    }
+    &__main-description {
+        max-width: 1200px;
+        font-family: "JetbrainsMono Nerd Font";
+        font-size: 12;
+        line-height: 198.5%;
+        letter-spacing: 5.5%;
+    }
+}
+
+.special-text {
+    padding: .25rem;
+    background-color: #ffffff22;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.back-button {
+    margin-bottom: 3.4375rem;
+    filter: invert(1);
+}
+
+.quote-card {
+    height: auto;
+    width: auto;
+    padding: 2.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: #ffffff11;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    &__headers {
+        margin-bottom: 1.875rem;
+        line-height: 150%;
+    }
+    &__movie-title,
+    &__quote-author {
+        font-family: "JetBrainsMono Nerd Font";
+        font-size: 1.95rem;
+        letter-spacing: -6%;
+    }
+    &__movie-title {
+        margin-bottom: 0.6875rem;
+        color: #EE1D52;
+    }
+    &__quote-phrase {
+        @include flexbox(flex-start, flex-start, row);
+        &--quotation-mark {
+            margin-right: 10px;
+        }
+        &--quote-text {
+            font-family: "JetBrainsMono Nerd Font";
+            font-size: .8125rem;
+        }
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 1.25rem 4.375rem;
+    border-radius: 10px;
+    background-color: #ffffff11;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 700;
+    letter-spacing: .45rem;
+    text-transform: uppercase;
+}
+
+// Flex COntainer 
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+}
+
+.buttons-container {
+    @include flexbox(center, center, row);
+    margin-top: 5rem;
+    // position: fixed;
+}
+
+.content-section {
+    flex: none;
+    width: 100vw;
+    scroll-snap-align: start;
+    &__home {
+        @include flexbox(center, center, column);
+    }
+    &__quotes-page {
+        padding: 2rem;
+        @include flexbox(center, flex-start, column);
+        .quote-card {
+            align-self: center;
+            width: 80vw;
+            min-height: 30vh;
+        }
+    }
+}

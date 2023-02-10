@@ -6,11 +6,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Pulse</title>
-    <link rel="stylesheet" href="./Sass/CSS/main.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <link rel="stylesheet" href="./CSS/spinner.css">
 </head>
 
 <body>
-    <h1>Hello</h1>
+    <nav class="nav-main">
+        <img class="nav-main__logo" src="./Assets/Logo - Power pulse.svg" alt="Power Pulse Logo">
+        <!-- <p class="nav-main__info">
+            <span class="typer" data-delay="90" data-words="BRUCE BANNER, THOR, WONDER WOMAN, IRON MAN" data-colors="#fcfcfc"></span>
+        </p> -->
+
+    </nav>
+
+    <div class="gradient-overlay"></div>
+
+    <!-- <div class="loader-wrapper">
+        <span class="loader"></span>
+    </div> -->
+
+    <section class="flex-container">
+        <section id="home-section" class="content-section content-section__home">
+            <div class="text__headers-wrapper">
+                <h1 class="text text__main-title">
+                    GREETINGS
+                </h1>
+                <h1 class="text text__main-title">
+                    MORTAL
+                </h1>
+            </div>
+
+            <p class="text text__main-description">
+                Greetings, I bring to you a portal to the mystical world of Marvel quotes, where you can access the knowledge of the greatest heroes and villains with just a click of a button. To start your journey, simply use the <span class="special-text">start</span>                button below, and let the mystic arts guide you.
+            </p>
+        </section>
+
+        <section id="quotes-page-section" class="content-section content-section__quotes-page">
+            <img id="back-btn" src="./Assets/Back button svg.svg" alt="" class="back-button">
+
+            <div class="quote-card">
+                <div class="quote-card__headers">
+                    <h3 class="quote-card__movie-title">
+                        THE AVENGERS
+                    </h3>
+                    <h3 class="quote-card__quote-author">
+                        BRUCE BANNER
+                    </h3>
+                </div>
+
+                <div class="quote-card__quote-phrase">
+                    <img src="./Assets/quote-mark.svg" alt="" class="quote-card__quote-phrase--quotation-mark">
+
+                    <p class="text quote-card__quote-phrase--quote-text">
+                        That's my secret captain, I'm always angry.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="buttons-container">
+        <button id="generate-button" class="btn">
+            START
+        </button>
+    </section>
+    <script src="./Js/typer.js"></script>
 </body>
 
 </html>
