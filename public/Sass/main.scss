@@ -23,10 +23,14 @@ body {
     background: transparent;
 }
 
+.logo {
+    z-index: 100;
+}
+
 .nav-main {
     padding: 1.875rem 8.75rem;
     @include flexbox(center, center, row);
-    margin-bottom: 6.6875rem;
+    margin-bottom: 4.6875rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -58,9 +62,21 @@ body {
     &__headers-wrapper {
         line-height: 205%;
         margin-bottom: 4.125rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffffcc;
+            height: 5px;
+            width: 20px;
+            border-radius: 30px;
+        }
     }
     &__main-description {
-        max-width: 1200px;
+        max-width: 1000px;
         font-family: "JetbrainsMono Nerd Font";
         font-size: 12;
         line-height: 198.5%;
@@ -70,14 +86,17 @@ body {
 
 .special-text {
     padding: .25rem;
-    background-color: #ffffff22;
-    backdrop-filter: blur(10px);
+    background-color: #ffffff;
     border-radius: 5px;
+    color: #1d1d1d;
+    font-size: smaller;
+    font-weight: bold;
 }
 
 .back-button {
     margin-bottom: 3.4375rem;
     filter: invert(1);
+    cursor: pointer;
 }
 
 .quote-card {
@@ -85,7 +104,7 @@ body {
     width: auto;
     padding: 2.5rem 1.5rem;
     border-radius: 10px;
-    background-color: #ffffff11;
+    background-color: #ffffff1d;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     &__headers {
@@ -117,9 +136,9 @@ body {
 .btn {
     border: none;
     outline: none;
-    padding: 1.25rem 4.375rem;
+    padding: .85rem 3.375rem;
     border-radius: 10px;
-    background-color: #ffffff11;
+    background-color: #ffffff1d;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     color: #fff;
@@ -127,6 +146,8 @@ body {
     font-weight: 700;
     letter-spacing: .45rem;
     text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
 }
 
 // Flex COntainer 
@@ -142,7 +163,6 @@ body {
 .buttons-container {
     @include flexbox(center, center, row);
     margin-top: 5rem;
-    // position: fixed;
 }
 
 .content-section {
@@ -157,8 +177,21 @@ body {
         @include flexbox(center, flex-start, column);
         .quote-card {
             align-self: center;
-            width: 80vw;
+            width: 70vw;
             min-height: 30vh;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .buttons-container {
+        @include flexbox(center, center, row);
+        margin-top: 2rem;
+    }
+    .text {
+        &__main-description {
+            text-align: center;
+            padding-inline: 3rem;
         }
     }
 }

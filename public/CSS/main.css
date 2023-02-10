@@ -15,13 +15,17 @@ body {
   background: transparent;
 }
 
+.logo {
+  z-index: 100;
+}
+
 .nav-main {
   padding: 1.875rem 8.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 6.6875rem;
+  margin-bottom: 4.6875rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -51,9 +55,21 @@ body {
 .text__headers-wrapper {
   line-height: 205%;
   margin-bottom: 4.125rem;
+  position: relative;
+}
+.text__headers-wrapper::after {
+  position: absolute;
+  content: "";
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 5px;
+  width: 20px;
+  border-radius: 30px;
 }
 .text__main-description {
-  max-width: 1200px;
+  max-width: 1000px;
   font-family: "JetbrainsMono Nerd Font";
   font-size: 12;
   line-height: 198.5%;
@@ -62,15 +78,17 @@ body {
 
 .special-text {
   padding: 0.25rem;
-  background-color: rgba(255, 255, 255, 0.1333333333);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: #ffffff;
   border-radius: 5px;
+  color: #1d1d1d;
+  font-size: smaller;
+  font-weight: bold;
 }
 
 .back-button {
   margin-bottom: 3.4375rem;
   filter: invert(1);
+  cursor: pointer;
 }
 
 .quote-card {
@@ -78,7 +96,7 @@ body {
   width: auto;
   padding: 2.5rem 1.5rem;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.0666666667);
+  background-color: rgba(255, 255, 255, 0.1137254902);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
@@ -112,9 +130,9 @@ body {
 .btn {
   border: none;
   outline: none;
-  padding: 1.25rem 4.375rem;
+  padding: 0.85rem 3.375rem;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.0666666667);
+  background-color: rgba(255, 255, 255, 0.1137254902);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: #fff;
@@ -122,6 +140,8 @@ body {
   font-weight: 700;
   letter-spacing: 0.45rem;
   text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 .flex-container {
@@ -161,6 +181,20 @@ body {
 }
 .content-section__quotes-page .quote-card {
   align-self: center;
-  width: 80vw;
+  width: 70vw;
   min-height: 30vh;
+}
+
+@media screen and (min-width: 720px) {
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+  .text__main-description {
+    text-align: center;
+    padding-inline: 3rem;
+  }
 }/*# sourceMappingURL=main.css.map */
