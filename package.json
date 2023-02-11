@@ -2,10 +2,10 @@
     "name": "marvel-quote-api",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
         "dev": "nodemon server",
-        "start": "node server"
+        "start": "node server",
+        "build": "parcel build public/index.html"
     },
     "keywords": [],
     "author": "",
