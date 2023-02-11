@@ -1,3 +1,6 @@
 /node_modules
 .env
 commits.log
+*.log
+./.parcel-cache
+.parcel-cache
